@@ -30,13 +30,13 @@ print('size of vocab: ',len(vocab))
 print('sample document: ',documents[0])
 print(vocab)
 #save the vocab in a text file
-with open('tf-idf/vocab.txt','w') as f:
+with open('vocab.txt','w') as f:
     for key in vocab.keys():
         f.write("%s\n" % key)
-with open('tf-idf/idf-values.txt','w') as f:
+with open('idf-values.txt','w') as f:
     for key in vocab.keys():
         f.write("%s\n" % vocab[key])
-with open('tf-idf/documents.txt', 'w') as f:
+with open('documents.txt', 'w') as f:
     for document in documents:
         f.write("%s\n" % ' '.join(document))
 inverted_index = {}
