@@ -11,9 +11,9 @@ def find_encoding(fname):
     return charenc
 def load_vocab():
     vocab = {}
-    with open('tf-idf\\vocab.txt', "r",encoding=find_encoding("tf-idf\\vocab.txt")) as f:
+    with open('vocab.txt', "r",encoding=find_encoding("vocab.txt")) as f:
         vocab_terms = f.readlines()
-    with open('tf-idf\\idf-values.txt', "r",encoding=find_encoding("tf-idf\\idf-values.txt")) as f:
+    with open('idf-values.txt', "r",encoding=find_encoding("idf-values.txt")) as f:
         idf_values = f.readlines()
 
     for (term, idf_value) in zip(vocab_terms, idf_values):
@@ -23,7 +23,7 @@ def load_vocab():
 
 
 def load_document():
-    with open("tf-idf\\documents.txt", "r",encoding=find_encoding("tf-idf\\documents.txt")) as f:
+    with open("documents.txt", "r",encoding=find_encoding("documents.txt")) as f:
         documents = f.readlines()
 
     # print('Number of documents: ', len(documents))
@@ -31,7 +31,7 @@ def load_document():
     return documents
 def load_inverted_index():
     inverted_index = {}
-    with open('tf-idf\\inverted-index.txt', 'r',encoding=find_encoding('tf-idf\\inverted-index.txt')) as f:
+    with open('inverted-index.txt', 'r',encoding=find_encoding('inverted-index.txt')) as f:
         inverted_index_terms = f.readlines()
 
     for row_num in range(0, len(inverted_index_terms), 2):
@@ -43,7 +43,7 @@ def load_inverted_index():
     return inverted_index
 
 def load_link_of_qs():
-    with open("tf-idf\\Qindex.txt", "r",encoding=find_encoding("tf-idf\\Qindex.txt")) as f:
+    with open("Qindex.txt", "r",encoding=find_encoding("Qindex.txt")) as f:
         links = f.readlines()
     return links
 vocab = load_vocab()
