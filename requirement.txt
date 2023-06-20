@@ -66,3 +66,5 @@ wincertstore
 WTForms
 yarl
 zc.lockfile
+omw==1.4
+wordnet
