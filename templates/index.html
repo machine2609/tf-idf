@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Page</title>
+    <style>
+      body {
+        background-color: black;
+        color: blue;
+      }
+
+      h1 {
+        text-align: center;
+        animation: scale-in 1s ease-in;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        animation: fade-in 1s ease-in;
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .form input[type="text"] {
+        color: rgb(47, 255, 0);
+        width: 500px; /* Increase the width as desired */
+        font-size: 20px; /* Increase the font size as desired */
+        height: 30px; /* Increase the height as desired */
+      }
+
+      .form label {
+        font-size: 34px; /* Increase the font size as desired */
+      }
+
+      .result-box {
+        background-color: #444;
+        padding: 10px;
+        margin-top: 20px;
+        animation: slide-up 0.5s ease-out;
+        position: relative;
+      }
+
+      @keyframes slide-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .result-box::before {
+        content: attr(data-number);
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: blue;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        color: rgb(255, 255, 0);
+      }
+
+      .output-text {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CODE SEARCH</h1>
+    <div class="form-container">
+      <form method="POST" class="form">
+        {{ form.hidden_tag() }}
+        <label for="{{ form.search.id }}" style="font-size: 24px;">Enter your Search terms: </label>
+        {{ form.search(class="red-text") }}
+        {{ form.submit() }}
+      </form>
+    </div>
+    <div>
+      {% for result in results %}
+      <div class="result-box" data-number="{{ loop.index }}">
+        <a href="{{ result['Question Link'] }}">{{ result['Question Link'] }}</a>
+        <p class="output-text">Score: {{ result['Score'] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
