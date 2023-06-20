@@ -58,7 +58,7 @@ PySocks
 python-dateutil
 python-docx
 pytz==2021.3
-rank-bm25=
+rank-bm25
 regex
 requests
 scikit-learn
