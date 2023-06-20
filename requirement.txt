@@ -80,3 +80,4 @@ wincertstore
 WTForms
 yarl
 zc.lockfile
+chardet
