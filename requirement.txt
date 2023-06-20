@@ -44,12 +44,12 @@ mysqlclient==2.1.0
 nltk==3.7
 num2words==0.5.10
 numexpr==2.8.1
-numpy==1.22.3
+numpy
 packaging==21.3
 pandas==1.4.2
 Pattern==3.6
 pdfminer.six==20220524
-pip==22.1
+pip
 portend==3.1.0
 pycparser==2.21
 pyOpenSSL==22.0.0
@@ -76,7 +76,7 @@ urllib3==1.26.9
 Werkzeug==2.0.3
 wheel==0.37.1
 win-inet-pton==1.1.0
-wincertstore==0.2
-WTForms==2.3.3
-yarl==1.6.3
-zc.lockfile==2.0
+wincertstore
+WTForms
+yarl
+zc.lockfile
