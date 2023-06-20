@@ -26,12 +26,12 @@ Repository: https://github.com/machine2609/tf-idf
 Hosted website: https://tf-idf-session-oeal.onrender.com/
 
 //The loading of website takes sometime. Thanks for your patience.
-Steps to Build the App Locally
+## Steps to Build the App Locally
 Getting started
 Clone this repo: https://github.com/machine2609/tf-idf/tree/master
-Change to the repo directory: cd tf-idf
-If you want to use virtual environment: conda create --name
-To activate the environment : conda activate --name
-To deactivate the environment : conda deactivate
-Install dependencies with pip or conda: pip install -r requirements.txt or conda install -r requirements.txt
-Make sure to activate the environment. Then open the command line and run the app: python app.py
+1)Change to the repo directory: cd tf-idf
+2)If you want to use virtual environment: conda create --name
+3)o activate the environment : conda activate --name
+4)To deactivate the environment : conda deactivate
+5)Install dependencies with pip or conda: pip install -r requirements.txt or conda install -r requirements.txt
+6)Make sure to activate the environment. Then open the command line and run the app: python app.py
