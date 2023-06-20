@@ -9,7 +9,7 @@ Bottleneck==1.3.4
 brotlipy==0.7.0
 certifi==2022.5.18.1
 cffi==1.15.0
-charset-normalizer==2.0.4
+chardet
 cheroot==8.6.0
 CherryPy==18.6.1
 click==8.0.4
